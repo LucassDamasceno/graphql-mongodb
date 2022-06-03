@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - 27017:27017
+    networks:
+      - spectacle
+  frontend:
+    container_name: frontend-spectacle-apollo
+    image: frontend-spectacle:1.0.0
+    build:
+      context: ./frontend-spectacle
+      dockerfile: ./Dockerfile
+    command: npm run start
+    ports:
+      - 3000:3000
+    networks:
+      - spectacle
+  backend:
+    container_name: backend-spectacle-gql-mongo
+    image: backend-spectacle:1.0.0
+    build:
+      context: ./backend-spectacle
+      dockerfile: ./Dockerfile
+    command: npm run start
+    ports:
+      - 3001:3001
+    networks:
+      - spectacle
+networks:
+  spectacle:

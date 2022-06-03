@@ -1,0 +1,56 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+frontend-spectacle/node_modules
+frontend-spectacle/.pnp
+frontend-spectacle/.pnp.js
+
+# testing
+frontend-spectacle/coverage
+
+# production
+frontend-spectacle/build
+
+# misc
+frontend-spectacle/.DS_Store
+frontend-spectacle/npm-debug.log*
+frontend-spectacle/yarn-debug.log*
+frontend-spectacle/yarn-error.log*
+
+.DS_Store
+
+# compiled output
+backend-spectacle/dist
+backend-spectacle/node_modules
+
+# Logs
+backend-spectacle/logs
+backend-spectacle/*.log
+backend-spectacle/npm-debug.log*
+backend-spectacle/pnpm-debug.log*
+backend-spectacle/yarn-debug.log*
+backend-spectacle/yarn-error.log*
+backend-spectacle/lerna-debug.log*
+
+# OS
+backend-spectacle/.DS_Store
+
+# Tests
+backend-spectacle/coverage
+backend-spectacle/.nyc_output
+
+# IDEs and editors
+backend-spectacle/.idea
+backend-spectacle/.project
+backend-spectacle/.classpath
+backend-spectacle/.c9/
+backend-spectacle/*.launch
+backend-spectacle/.settings/
+backend-spectacle/*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
